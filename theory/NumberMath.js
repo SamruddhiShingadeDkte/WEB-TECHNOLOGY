@@ -39,4 +39,5 @@ console.log(Math.min(1,2,3,4))
 //gives max value
 console.log(Math.max(1,2,3,4))
 
-//Activity : - math.random 
+//Activity : - math.random ,gives random value between 0 to 1
+console.log(Math.random())
