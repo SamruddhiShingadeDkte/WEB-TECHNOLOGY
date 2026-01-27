@@ -54,7 +54,7 @@ function reverseNum(num){
 }
 let number2 = 121;
 let reverse_num = reverseNum(number2);
-if(number === reverse_num){
+if(number2 === reverse_num){
     console.log("Palindrome number")
 }
 else{
@@ -74,7 +74,7 @@ function ReverseNumbers(num){
     }
     return 1;
 }
-let result = ReverseNumbers(number)
+let result = ReverseNumbers(number2)
 if(result == 0){
     console.log("Not a Palindrome number")
 }
@@ -122,7 +122,7 @@ console.log(uniqueArr);
 
 
 // //h.reverse the string 
-// let student_name = "samruddhi";
+let student_name = "samruddhi";
 //here if we use split("") then it will converts the string into the array then in array there is readymade function to reverse () then after usin the join("") it will again convert that array data to string 
  console.log("Reversed string is : "+student_name.split("").reverse().join(""))
 
@@ -146,7 +146,7 @@ for(j=0;j<str.length;j++){
 }
 console.log("Count of vowels is "+count)
 
-//j.check palindrone in string
+// //j.check palindrone in string
 //1st approach 
 let fistString = "madam"
 let revString = fistString.split("").reverse().join("")
@@ -177,8 +177,8 @@ else{
     console.log(" Palindrone ")
 }
 
-//k.for numbers , check prime number and factorial number
-//prime number : - 
+// //k.for numbers , check prime number and factorial number
+// //prime number : - 
 function PrimeNum(num){
     console.log(num)
     let i,flag = 0;
@@ -225,9 +225,9 @@ evenOdd(1)
 
 //m.write function to find sum of numbers in array
 let arr1 = [1,2,3,4]
-let i;
+//let i;
 let sum =0;
-for(i=0;i<arr1.length;i++){
+for(let i=0;i<arr1.length;i++){
     sum = sum+arr1[i]
 }
 console.log(sum)
