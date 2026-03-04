@@ -13,3 +13,12 @@ JavaScript is a object oriented language and it is used to make the pages intera
 
 •	Why do we use Node.js?
 to run the javascript code out of the browser
+
+DOM :- document object model 
+it is bridge between java script and html 
+it is programming interface between the javascript and html
+to make the web interactive because java script alone can not make the changes in the web pages 
+whenever the web pages load then that html pages are first converted into the object that object is nothing but the DOM . therefore by using DOM we can add or delete or make any kind of changes in the web pages 
+
+higher order function means they will take the another function as an argument .
+short circuit evaluation

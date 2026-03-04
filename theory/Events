@@ -1,0 +1,24 @@
+what is an events : 
+event is an action that happens in the browser . 
+examples : clicking a button , moving mouse , pressing keys ,submitting form and loading a page.
+java script can detects these events and respond to them 
+
+types of events : there are 3 types of events as : mouse event , keyboard event and browser event . 
+mouse event : click , dblclick , mouse hover , mouse out.
+keyboard events : keydown and keyup
+browser events : load , resize and scroll
+
+eg:     <li>
+            <img id="japan"
+                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                onclick="alert('Japan image here')"  
+                alt="Mount Fuji">
+        </li>
+
+this is not good way beacause the html should contain only structure and java code contains logic therefore use script tag instead of mixing both 
+
+assignment : jquery , type , typestam , default prevented, target , source element , current tab, client x , client y , screen x , screen y,alt key ,control key , shift key .
+
+addEventListener is a java script method used to attach an event handler to an html elements so that specific functions runs when event occurs 
+
+event propagation : event 

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Events Demo</title>
+
+    <style>
+        body {
+            background-color: #414141;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 15px;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        a {
+            color: lightblue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Amazing Images (Click to Remove)</h2>
+
+    <ul id="images">
+        <li>
+            <img id="photoshop"
+                src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg"
+                alt="Photoshop Logo">
+        </li>
+        
+        <li>
+            <img id="japan"
+                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+                onclick="alert('Japan image here')"  
+                alt="Mount Fuji">
+        </li>
+
+        <li>
+            <img id="Nature"
+                src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b"
+                alt="Nature Image">
+        </li>
+
+        <li>
+            <img id="photoman"
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                alt="Photographer">
+        </li>
+
+        <li>
+            <img id="tiger"
+                src="https://images.unsplash.com/photo-1546182990-dffeafbe841d"
+                alt="Tiger">
+        </li>
+
+        <li>
+            <a href="https://google.com" id="google">Visit Google</a>
+        </li>
+    </ul>
+    <script>
+         // select element assign function to click event when click function runs
+        document.getElementById('japan').onclick= function (){
+            alert("javan image here")
+        }
+        document.getElementById('Nature').onclick = function (){
+            alert("nature image here")
+        }
+       
+        //select element add action listner and then in function object of that listener is given
+        document.getElementById('tiger').addEventListener('click',function (e){
+            console.log(e)
+        })
+
+        //event propagation
+        document.getElementById('images').addEventListener('click',function (){
+            console.log("clicking inside the image")
+        },false)
+        document.getElementById('photoman').addEventListener('click',function (){
+            console.log("clicking photoman")
+        },true)
+
+        //event bubbly : inner element to the parent and parent to the document if photoshop element click then clicking photoshop and then clicking inside image 
+        // event bubble up : event caputring true then order becomes parent to child 
+        document.getElementById('images').addEventListener('click',function (){
+            console.log("clicking inside the image")
+        },true)
+        document.getElementById('photoman').addEventListener('click',function (){
+            console.log("clicking photoman")
+        },true)
+
+        //default prevented : we are clicking on link but not goes to that link
+        document.getElementById('google').addEventListener('click',function (e){
+            console.log("google clicked")
+            e.preventDefault()
+        })
+
+        //activity : remove the image after click , but after refresh come again
+    </script>
+  </body>
+  <script></script>
+  </html>

@@ -19,6 +19,7 @@ console.log(balance.toLocaleString('en-IN'))
 //MATH OPERATIONS :-
 
 //datatype of Math is object 
+//used to perform the mathematical operations math is used 
 console.log(Math) 
 
 //it will converts negative to positive and positive values will be positive 
