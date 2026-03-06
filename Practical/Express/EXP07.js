@@ -5,6 +5,12 @@ let arr = [{id:1 ,name: "samruddhi" , department:"Developer"} ,
     { id : 4, name : "Vaishnavi" , department : "designer"}
 ]
 
+for(i=0;i<arr.length;i++){
+    if(arr[i].id == 2){
+
+    }
+}
+
 //import express
 const express = require('express')
 
@@ -15,6 +21,20 @@ app.get('/users',(req,res)=>{
     res.json({
         message : "Users list ",
         data : arr
+    })
+})
+
+app.get('/users/:id',(req,res)=>{
+    const id = req.params.id;
+    let user_p = {}
+    for(i=0;i<arr.length;i++){
+    if(arr[i].id == id){
+        user_p = arr[i]
+    }
+}
+    res.json({
+        message : "particular user info",
+        data : user_p
     })
 })
 
